@@ -8,7 +8,7 @@ public class FibonacciTabulated {
         lookupTable[1] = 1;
 
         for(int i = 2; i <= n; i++) {
-            lookupTable[i] = fib(i-1, lookupTable) + fib(i-2, lookupTable);
+            lookupTable[i] = lookupTable[i-1] + lookupTable[i-2];
         }
 
         return lookupTable[n];
