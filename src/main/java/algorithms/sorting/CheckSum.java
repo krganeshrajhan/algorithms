@@ -1,5 +1,7 @@
 package algorithms.sorting;
 
+import algorithms.sorting.helper.Helper;
+
 import java.util.Arrays;
 
 public class CheckSum {
@@ -8,6 +10,7 @@ public class CheckSum {
         int[] result = new int[2];
 
         Arrays.sort(arr);
+        Helper.quickSort(arr, 0, arr.length - 1);
         int i = 0;
         int j = arr.length - 1;
         while(i < j) {
