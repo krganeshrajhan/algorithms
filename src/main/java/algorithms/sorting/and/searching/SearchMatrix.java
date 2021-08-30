@@ -3,30 +3,21 @@ package algorithms.sorting.and.searching;
 public class SearchMatrix {
 
     public static boolean findKey(int[][] matrix, int numberOfRows, int numberOfColumns, int target) {
-        for(int i = 0; i < numberOfRows; i++) {
-            if(matrix[i][0] <= target && target <= matrix[i][numberOfColumns-1]) {
-                return binarySearch(matrix, i, 0, numberOfColumns-1, target);
+        int min = 0;
+        int max = numberOfRows * numberOfColumns - 1;
+        while( min <= max) {
+            int mid = (min + max) / 2;
+            int row = mid / numberOfColumns;
+            int col = mid % numberOfColumns;
+            if(target < matrix[row][col]) {
+                max = mid - 1;
+            } else if(target > matrix[row][col]) {
+                min = mid + 1;
+            } else {
+                return true;
             }
         }
         return false;
-    }
-
-    private static boolean binarySearch(int[][] matrix, int row, int start, int end, int target) {
-        int mid = (start + end + 1) / 2;
-        if(matrix[row][mid] < target) {
-            if(mid == end) {
-                return false;
-            }
-            return binarySearch(matrix, row, mid+1, end, target);
-        } else if(matrix[row][mid] > target) {
-            if(mid == start) {
-                return false;
-            }
-            return binarySearch(matrix, row, start, mid-1, target);
-        } else {
-            return true;
-        }
-
     }
 
     public static void main(String[] args) {
