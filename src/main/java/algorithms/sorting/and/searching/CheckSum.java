@@ -1,4 +1,4 @@
-package algorithms.searching;
+package algorithms.sorting.and.searching;
 
 import java.util.HashSet;
 import java.util.Set;

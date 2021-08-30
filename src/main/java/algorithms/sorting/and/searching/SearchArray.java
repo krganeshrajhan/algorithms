@@ -1,4 +1,4 @@
-package algorithms.searching;
+package algorithms.sorting.and.searching;
 
 public class SearchArray {
 
@@ -11,7 +11,7 @@ public class SearchArray {
                 break;
             }
         }
-        return (ind -left + length) % length;
+        return (ind == Integer.MIN_VALUE) ? -1 : (ind -left + length) % length;
     }
 
     public static void main(String[] args) {
@@ -20,6 +20,8 @@ public class SearchArray {
         int right = 6;    // Ending Index of the Array
         int n = 3;        // Key to Search
         System.out.println(searchRotatedArray(arr, left, right, n));
+        System.out.println(searchRotatedArray(new int[]{5,6,7,1,2,3,4}, 0, 6, 0));
+        System.out.println(searchRotatedArray(new int[]{2,2,2,2,4,5,3}, 0, 6, 2));
     }
 
 }

@@ -1,4 +1,4 @@
-package algorithms.sorting.helper;
+package algorithms.sorting.and.searching.helper;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
-package algorithms.sorting;
+package algorithms.sorting.and.searching;
 
-import algorithms.sorting.helper.SortingHelper;
+import algorithms.sorting.and.searching.helper.SortingHelper;
 
 public class QuickSort {
 
