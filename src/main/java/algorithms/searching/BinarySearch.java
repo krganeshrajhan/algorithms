@@ -9,6 +9,8 @@ public class BinarySearch {
         int index = binarySearch(1, arr, arr.length);
         SortingHelper.printArr(arr);
         System.out.println(index);
+        index = binarySearch(6, arr, arr.length);
+        System.out.println(index);
     }
 
     private static int binarySearch(int key, int[] arr, int length) {
