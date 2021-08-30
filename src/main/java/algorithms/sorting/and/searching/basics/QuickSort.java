@@ -1,4 +1,4 @@
-package algorithms.sorting.and.searching;
+package algorithms.sorting.and.searching.basics;
 
 import algorithms.sorting.and.searching.helper.SortingHelper;
 
