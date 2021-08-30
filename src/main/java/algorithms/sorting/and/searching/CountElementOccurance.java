@@ -16,7 +16,18 @@ public class CountElementOccurance {
         } else if(key > arr[mid]) {
             return binarySearch(arr, key, mid+1, end);
         } else {
-            return binarySearch(arr, key, start, mid-1) + 1 + binarySearch(arr, key, mid+1, end);
+            int count = 1;
+            int s = mid - 1;
+            while (s >= 0 && arr[s] == key) {
+                count++;
+                start--;
+            }
+            int e = mid + 1;
+            while (e < arr.length && arr[e] == key) {
+                count++;
+                e++;
+            }
+            return count;
         }
     }
 
