@@ -3,7 +3,7 @@ package algorithms.sorting.and.searching.helper;
 import java.util.Random;
 
 public class Helper {
- static void swap(int[] array, int i, int j) {
+ public static void swap(int[] array, int i, int j) {
   int temp = array[i];
   array[i] = array[j];
   array[j] = temp;
