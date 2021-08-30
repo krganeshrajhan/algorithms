@@ -8,7 +8,7 @@ public class SortingHelper {
         }
     }
 
-    public static int findMin(int[] arr, int start, int arrSize) {
+    public static int findMin(int[] arr, int start) {
         int min = 0;
         int minValue = Integer.MAX_VALUE;
         for(int i = start; i < arr.length; i++) {
