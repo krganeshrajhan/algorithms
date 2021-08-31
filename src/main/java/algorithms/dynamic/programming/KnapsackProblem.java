@@ -8,14 +8,14 @@ public class KnapsackProblem {
             return 0;
         }
 
-        int profit = profits[index] + knapsack(profits, profitsLength, weights, weightsLength, capacity - weights[index], index + 1);
+        int profit = 0;
+        if(weights[index] <= capacity) {
+            profit = profits[index] + knapsack(profits, profitsLength, weights, weightsLength, capacity - weights[index], index + 1);
+        }
 
         int nextProfit = knapsack(profits, profitsLength, weights, weightsLength, capacity, index + 1);
         return Math.max(profit, nextProfit);
     }
-
-
-
 
     public static void main(String[] args) {
         int profit[] = {60, 100, 120};
