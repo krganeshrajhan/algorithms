@@ -10,7 +10,6 @@ public class LPS {
     }
 
     private static int LPSLength(String str) {
-        int length = str.length();
         int left = 0;
         int right = str.length() - 1;
         return lpsRecursive(str, left, right);
