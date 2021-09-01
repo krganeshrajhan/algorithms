@@ -1,4 +1,4 @@
-package algorithms.greedy;
+package algorithms.greedy.minplatforms;
 
 public class MinPlatforms {
 
