@@ -6,13 +6,13 @@ public class Partition {
 
     public static boolean canPartition(int[]num) {
         int sum = 0;
-        for(int i = 0; i < num.length; i++) {
-            sum += num[i];
+        for(int i : num) {
+            sum += i;
         }
         if(sum % 2 != 0) {
             return false;
         }
-        return canPartitionRec(num, 0, sum/2);
+        return canPartitionRec(num,0, sum/2);
     }
 
     private static boolean canPartitionRec(int[] num, int index, int sum) {
@@ -26,11 +26,13 @@ public class Partition {
         }
 
         if(num[index] <= sum) {
-            if(canPartitionRec(num, index + 1, sum - num[index])) {
+            if(canPartitionRec(num, index, sum - num[index])) {
                 return true;
             }
         }
+
         return canPartitionRec(num, index + 1, sum);
+
     }
 
     public static void main(String[] args) {
